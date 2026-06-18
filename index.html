@@ -14,30 +14,34 @@ body {
     text-align: center;
 }
 
-/* HERO */
 .hero {
     padding: 60px 20px;
     background: radial-gradient(circle at top, #222, black);
+}
+
+.school {
+    color: gold;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .hero h1 {
     font-size: 60px;
     color: gold;
     text-shadow: 0 0 20px gold;
+    margin: 0;
 }
 
 .hero p {
-    opacity: 0.8;
+    opacity: 0.85;
 }
 
-/* LEGACY */
 .legacy {
     padding: 20px;
     font-size: 18px;
-    opacity: 0.9;
 }
 
-/* POLL */
 .poll {
     margin: 30px auto;
     padding: 20px;
@@ -54,6 +58,7 @@ button {
     border-radius: 10px;
     font-weight: bold;
     cursor: pointer;
+    color: white;
 }
 
 .yes { background: limegreen; }
@@ -73,31 +78,17 @@ button {
     width: 0%;
 }
 
-/* TEAMS */
-.teams {
-    padding: 20px;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-    padding: 10px;
-}
-
-.card {
-    background: #222;
-    border: 1px solid gold;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-/* FOOTER */
 footer {
-    margin-top: 30px;
-    padding: 10px;
-    font-size: 12px;
-    opacity: 0.7;
+    margin-top: 50px;
+    padding: 30px;
+    background: #181818;
+    border-top: 2px solid gold;
+}
+
+.email {
+    color: gold;
+    font-size: 20px;
+    font-weight: bold;
 }
 </style>
 </head>
@@ -105,6 +96,7 @@ footer {
 <body>
 
 <div class="hero">
+    <div class="school">Shiv Nader School</div>
     <h1>DANGAL CUP</h1>
     <p>The Official 7th Grade Football League</p>
     <p><i>Play • Compete • Conquer</i></p>
@@ -136,22 +128,10 @@ footer {
     <p id="msg"></p>
 </div>
 
-<div class="teams">
-    <h2>Teams</h2>
-    <div class="grid">
-        <div class="card">Manchester City Type</div>
-        <div class="card">Manchester United Type</div>
-        <div class="card">Real Madrid Type</div>
-        <div class="card">Barcelona Type</div>
-        <div class="card">Arsenal Type</div>
-        <div class="card">Chelsea Type</div>
-        <div class="card">PSG Type</div>
-        <div class="card">Tottenham Type</div>
-    </div>
-</div>
-
 <footer>
-Made by a 7th grader with too much motivation ⚽
+    <p><b>Registrations Open ⚽</b></p>
+    <p>If you want to play, hit this email up:</p>
+    <p class="email">sahirsharma2014@gmail.com</p>
 </footer>
 
 <script>
@@ -165,7 +145,6 @@ function vote(type){
 
     data[type]++;
     localStorage.setItem("voted", "true");
-
     update();
 }
 
@@ -184,3 +163,4 @@ function update(){
 
 </body>
 </html>
+
